@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+<style type="text/css">
+    form ul {
+        display: none !important;
+    }
+
+    body{
+        background: url('{% static 'img/login_bak.jpg' %}');
+        color:white;
+    }
+
+
+</style>
+<div class="container">
+
+    <div class="row" style=" width: 80%; margin: 0 auto;margin-top:20%;background-color:rgba(0,0,255,0.3);">
+
+    <div class="col-sm-8 col-sm-offset-2" style="text-align:center;">
+         <p><h1>CPC<br/></h1><h2>Integrated Consumer Complaints System</h2></p>
+      <a class="btn btn-primary btn-lg" href="http://daetacity.pythonanywhere.com/accounts/login/" role="button">Login</a>
+      <span> &nbsp;<a class="btn btn-primary btn-lg" href="http://daetacity.pythonanywhere.com/accounts/register/" role="button">Register</a></span>
+     </div>
+    </div>
+</div>
+{% endblock %}
+

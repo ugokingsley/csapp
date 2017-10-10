@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+
+
+{% block content %}
+<style type="text/css">
+    form ul {
+        display: none !important;
+    }
+
+    body{
+        background: url('{% static 'img/login_bak.jpg' %}');
+        color:white;
+    }
+    a,#hint_id_username,#hint_id_email,#hint_id_password2,strong{
+        color:yellow;
+    }
+
+</style>
+<div class="row" style=" width: 80%; margin: 0 auto;">
+<div class="col-sm-8 col-sm-offset-3" style="margin-top:30px;background-color:rgba(0,0,255,0.3);">
+  <h1>Register Now</h1>
+<form method="post" action=".">
+  {% csrf_token %}
+  {{ form | crispy }}
+
+  <input class="btn btn-primary" type="submit" value="{% trans 'Submit' %}" />
+</form>
+  </div>
+  </div>
+{% endblock %}

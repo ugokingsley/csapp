@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div class="container">
+        <p>{% trans "You are now registered. Activation email sent." %}</p>
+        <p>< class="active"><a href="{% url 'auth_login' %}">Login<span class="sr-only">(current)</span></a></p>
+    </div>
+{% endblock %}

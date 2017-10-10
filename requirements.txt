@@ -1,0 +1,6 @@
+-f /usr/share/pip-wheels
+Django==1.11.4
+django-crispy-forms==1.6.1
+django-registration==2.2
+djangorestframework==3.6.3
+pytz==2017.2
